@@ -84,7 +84,7 @@ model.add( layers.Activation('softmax'))
 model.compile( loss='categorical_crossentropy', optimizer="adam", metrics=['accuracy'])
 model.summary()
 
-Epochs = 120
+Epochs = 1
 Batch_size = 1024
 
 hist = model.fit( x_train, y_train, batch_size = Batch_size, epochs=Epochs, validation_data=(x_val, y_val))
@@ -93,8 +93,8 @@ model.save("morse.h5")
 
 plt.figure(figsize=(20,5)) 
 plt.subplot(121) 
-plt.plot(hist.history['acc']) 
-plt.plot(hist.history['val_acc']) 
+plt.plot(hist.history['accuracy']) 
+plt.plot(hist.history['val_accuracy']) 
 plt.title('model accuracy') 
 plt.ylabel('accuracy') 
 plt.xlabel('epoch') 
