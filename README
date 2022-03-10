@@ -1,2 +1,5 @@
 An duplication of https://juejin.cn/post/6844903576347623431
 
+python=3.6
+tensorflow=2.0.0
+keras=2.3.1

@@ -88,7 +88,10 @@ Epochs = 120
 Batch_size = 1024
 
 hist = model.fit( x_train, y_train, batch_size = Batch_size, epochs=Epochs, validation_data=(x_val, y_val))
-plt.figure(figsize=(205)) 
+
+model.save("morse.h5")
+
+plt.figure(figsize=(20,5)) 
 plt.subplot(121) 
 plt.plot(hist.history['acc']) 
 plt.plot(hist.history['val_acc']) 
