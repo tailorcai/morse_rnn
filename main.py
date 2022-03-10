@@ -84,7 +84,7 @@ model.add( layers.Activation('softmax'))
 model.compile( loss='categorical_crossentropy', optimizer="adam", metrics=['accuracy'])
 model.summary()
 
-Epochs = 1
+Epochs = 120
 Batch_size = 1024
 
 hist = model.fit( x_train, y_train, batch_size = Batch_size, epochs=Epochs, validation_data=(x_val, y_val))
